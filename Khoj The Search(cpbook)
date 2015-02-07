@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int search(char[],char[]);
+
+int main(){
+    int n,loc;
+    char src[128],str[128];
+    scanf("%d", &n);
+    while(n!=0){
+        scanf("%s", &src);
+        scanf("%s", &str);
+        loc=search(src,str);
+        printf("%d", loc);
+        n--;
+
+    }
+    return 0;
+}
+
+int search(char src[], char str[]){
+    int i=0,j=0,first0cc;
+    while(src[i]!='\0'){
+        while(src[i]!=str[0]&&src[i]!='\0')
+            i++;
+        first0cc=i;
+        while(src[i]==str[j]&&src[i]!='\0'&&str[j]!='\0'){
+            i++;
+            j++;
+        }
+        if(str[j]=='\0')
+            return (first0cc);
+        i=first0cc+1;
+        j=0;
+    }
+}
