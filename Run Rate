@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float ro,crr,rrr,tr, cr, rb,flag=0,bp;
+    int n;
+    scanf("%d", &n);
+
+    while(n!=0)
+    {
+        scanf("%f", &tr);
+        scanf("%f", &cr);
+        flag=tr-cr;
+        scanf("%f", &rb);
+        ro=0, crr=0, rrr=0,bp=0;
+        bp=300-rb;
+        bp=bp/6;
+        ro=rb/6;
+        crr=cr/bp;
+        rrr=(flag+1)/ro;
+        printf("%0.2f %0.2f", crr, rrr);
+    }
+    return 0;
+}
