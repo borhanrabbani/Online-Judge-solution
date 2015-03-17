@@ -3,22 +3,22 @@
 
 int main()
 {
-    float ro,crr,rrr,tr, cr, rb,flag=0,bp;
+    float rem_over,crr,rrr,total_run, current_run, rem_ball,flag=0,ball_played;
     int n;
     scanf("%d", &n);
 
     while(n!=0)
     {
-        scanf("%f", &tr);
-        scanf("%f", &cr);
-        flag=tr-cr;
-        scanf("%f", &rb);
-        ro=0, crr=0, rrr=0,bp=0;
-        bp=300-rb;
-        bp=bp/6;
-        ro=rb/6;
-        crr=cr/bp;
-        rrr=(flag+1)/ro;
+        scanf("%f", &total_run);
+        scanf("%f", &current_run);
+        flag=total_run-current_run;
+        scanf("%f", &rem_ball);
+        rem_over=0, crr=0, rrr=0,ball_played=0;
+        ball_played=300-rem_ball;
+        ball_played=ball_played/6;
+        rem_over=rem_ball/6;
+        crr=current_run/ball_played;
+        rrr=(flag+1)/rem_over;
         printf("%0.2f %0.2f", crr, rrr);
     }
     return 0;
