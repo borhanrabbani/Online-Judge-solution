@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+    int c,a,b,result,in;
+    while(scanf("%d%d",&a,&b)==2){
+        if(a>b){
+            result=a-b;
+        }
+        else
+            result=b-a;
+
+        printf("%d\n", result);
+    }
+}
