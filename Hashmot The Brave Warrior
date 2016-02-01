@@ -1,14 +1,13 @@
 #include <stdio.h>
 
 int main(){
-    int c,a,b,result,in;
-    while(scanf("%d%d",&a,&b)==2){
+    unsigned long int a,b;
+    while((scanf("%lu %lu",&a,&b))==2){
         if(a>b){
-            result=a-b;
+            printf("%lu\n",(a-b));
         }
         else
-            result=b-a;
-
-        printf("%d\n", result);
+            printf("%lu\n",(b-a));
     }
+    return 0;
 }
